@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Tuzoltosag_v1.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AlertSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bevezeto_morricone.wav</Value>
+    </Setting>
+    <Setting Name="WakeupSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ebreszto.wav</Value>
+    </Setting>
+    <Setting Name="TestSound" Type="System.String" Scope="User">
+      <Value Profile="(Default)">bevezeto_lgt.wav</Value>
+    </Setting>
+    <Setting Name="UpdateRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
