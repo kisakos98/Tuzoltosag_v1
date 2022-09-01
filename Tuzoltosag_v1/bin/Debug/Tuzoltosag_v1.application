@@ -3,6 +3,11 @@
   <assemblyIdentity name="Tuzoltosag_v1.application" version="1.0.0.8" publicKeyToken="0000000000000000" language="hu-HU" processorArchitecture="msil" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <description asmv2:publisher="Ákos Kis" asmv2:product="Riasztási program" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <deployment install="true" mapFileExtensions="true" co.v1:createDesktopShortcut="true">
+    <subscription>
+      <update>
+        <beforeApplicationStartup />
+      </update>
+    </subscription>
     <deploymentProvider codebase="https://ftpupload.net/TuzoltosagApp/Tuzoltosag_v1.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
@@ -16,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BL+HQoeiJo3arLg0TM8ZbDBZUnaimu6cepCqleDg+ps=</dsig:DigestValue>
+        <dsig:DigestValue>m+mWFxT6wHe8Gxm2DAJSPuGWxCtvARjOe8t+NbwP0Xc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
