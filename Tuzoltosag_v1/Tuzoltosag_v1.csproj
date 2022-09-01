@@ -23,14 +23,14 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>https://raw.githubusercontent.com/vib2810/WinFormsAutoUpdate/main/published/</InstallUrl>
-    <UpdateUrl>https://ftpupload.net/TuzoltosagApp/</UpdateUrl>
+    <InstallUrl>https://raw.githubusercontent.com/kisakos98/Tuzoltosag_v1/master/published/</InstallUrl>
+    <UpdateUrl>https://raw.githubusercontent.com/kisakos98/Tuzoltosag_v1/master/published/</UpdateUrl>
     <TargetCulture>hu-HU</TargetCulture>
     <ProductName>Riasztási program</ProductName>
     <PublisherName>Ákos Kis</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>9</ApplicationRevision>
+    <ApplicationRevision>10</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
