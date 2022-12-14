@@ -56,9 +56,10 @@ namespace Tuzoltosag_v1
             this.bErdoszer = new System.Windows.Forms.Button();
             this.bAll = new System.Windows.Forms.Button();
             this.bFire = new System.Windows.Forms.Button();
-            this.bFecskendo = new System.Windows.Forms.Button();
+            this.bFecskendo1 = new System.Windows.Forms.Button();
             this.tSPort = new System.Windows.Forms.Timer(this.components);
             this.bSettings = new System.Windows.Forms.Button();
+            this.bFecskendo2 = new System.Windows.Forms.Button();
             this.pAlarm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -359,7 +360,7 @@ namespace Tuzoltosag_v1
             this.bUtanfuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bUtanfuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bUtanfuto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bUtanfuto.Location = new System.Drawing.Point(83, 356);
+            this.bUtanfuto.Location = new System.Drawing.Point(83, 447);
             this.bUtanfuto.Margin = new System.Windows.Forms.Padding(2);
             this.bUtanfuto.Name = "bUtanfuto";
             this.bUtanfuto.Size = new System.Drawing.Size(269, 59);
@@ -376,7 +377,7 @@ namespace Tuzoltosag_v1
             this.bSpecErdoszer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSpecErdoszer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bSpecErdoszer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bSpecErdoszer.Location = new System.Drawing.Point(83, 274);
+            this.bSpecErdoszer.Location = new System.Drawing.Point(83, 360);
             this.bSpecErdoszer.Margin = new System.Windows.Forms.Padding(2);
             this.bSpecErdoszer.Name = "bSpecErdoszer";
             this.bSpecErdoszer.Size = new System.Drawing.Size(269, 59);
@@ -393,7 +394,7 @@ namespace Tuzoltosag_v1
             this.bErdoszer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bErdoszer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bErdoszer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bErdoszer.Location = new System.Drawing.Point(83, 191);
+            this.bErdoszer.Location = new System.Drawing.Point(83, 274);
             this.bErdoszer.Margin = new System.Windows.Forms.Padding(2);
             this.bErdoszer.Name = "bErdoszer";
             this.bErdoszer.Size = new System.Drawing.Size(269, 59);
@@ -439,23 +440,23 @@ namespace Tuzoltosag_v1
             this.bFire.Click += new System.EventHandler(this.bFire_Click);
             this.bFire.Paint += new System.Windows.Forms.PaintEventHandler(this.bFire_Paint);
             // 
-            // bFecskendo
+            // bFecskendo1
             // 
-            this.bFecskendo.AutoSize = true;
-            this.bFecskendo.BackColor = System.Drawing.Color.Green;
-            this.bFecskendo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bFecskendo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.bFecskendo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bFecskendo.Location = new System.Drawing.Point(83, 106);
-            this.bFecskendo.Margin = new System.Windows.Forms.Padding(2);
-            this.bFecskendo.Name = "bFecskendo";
-            this.bFecskendo.Size = new System.Drawing.Size(269, 59);
-            this.bFecskendo.TabIndex = 9;
-            this.bFecskendo.Text = "1. Fecskendő";
-            this.bFecskendo.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.bFecskendo.UseVisualStyleBackColor = false;
-            this.bFecskendo.Click += new System.EventHandler(this.bFecskendo_Click);
-            this.bFecskendo.Paint += new System.Windows.Forms.PaintEventHandler(this.bFecskendo_Paint);
+            this.bFecskendo1.AutoSize = true;
+            this.bFecskendo1.BackColor = System.Drawing.Color.Green;
+            this.bFecskendo1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bFecskendo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bFecskendo1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bFecskendo1.Location = new System.Drawing.Point(83, 106);
+            this.bFecskendo1.Margin = new System.Windows.Forms.Padding(2);
+            this.bFecskendo1.Name = "bFecskendo1";
+            this.bFecskendo1.Size = new System.Drawing.Size(269, 59);
+            this.bFecskendo1.TabIndex = 9;
+            this.bFecskendo1.Text = "1. Fecskendő";
+            this.bFecskendo1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.bFecskendo1.UseVisualStyleBackColor = false;
+            this.bFecskendo1.Click += new System.EventHandler(this.bFecskendo1_Click);
+            this.bFecskendo1.Paint += new System.Windows.Forms.PaintEventHandler(this.bFecskendo1_Paint);
             // 
             // tSPort
             // 
@@ -480,6 +481,24 @@ namespace Tuzoltosag_v1
             this.bSettings.UseVisualStyleBackColor = false;
             this.bSettings.Click += new System.EventHandler(this.bSettings_Click);
             // 
+            // bFecskendo2
+            // 
+            this.bFecskendo2.AutoSize = true;
+            this.bFecskendo2.BackColor = System.Drawing.Color.Green;
+            this.bFecskendo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bFecskendo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.bFecskendo2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.bFecskendo2.Location = new System.Drawing.Point(84, 191);
+            this.bFecskendo2.Margin = new System.Windows.Forms.Padding(2);
+            this.bFecskendo2.Name = "bFecskendo2";
+            this.bFecskendo2.Size = new System.Drawing.Size(269, 59);
+            this.bFecskendo2.TabIndex = 25;
+            this.bFecskendo2.Text = "2. Fecskendő";
+            this.bFecskendo2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.bFecskendo2.UseVisualStyleBackColor = false;
+            this.bFecskendo2.Click += new System.EventHandler(this.bFecskendo2_Click);
+            this.bFecskendo2.Paint += new System.Windows.Forms.PaintEventHandler(this.bFecskendo2_Paint);
+            // 
             // Alarm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -487,6 +506,7 @@ namespace Tuzoltosag_v1
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1277, 1029);
+            this.Controls.Add(this.bFecskendo2);
             this.Controls.Add(this.pAlarm);
             this.Controls.Add(this.bSettings);
             this.Controls.Add(this.bWakeup);
@@ -509,7 +529,7 @@ namespace Tuzoltosag_v1
             this.Controls.Add(this.bBackup);
             this.Controls.Add(this.bFire);
             this.Controls.Add(this.bExit);
-            this.Controls.Add(this.bFecskendo);
+            this.Controls.Add(this.bFecskendo1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -536,7 +556,7 @@ namespace Tuzoltosag_v1
         private System.Windows.Forms.Label lDate;
         private System.Windows.Forms.Button bAll;
         private System.Windows.Forms.Button bPractice;
-        private System.Windows.Forms.Button bFecskendo;
+        private System.Windows.Forms.Button bFecskendo1;
         private System.Windows.Forms.Button bErdoszer;
         private System.Windows.Forms.Button bSpecErdoszer;
         private System.Windows.Forms.Button bUtanfuto;
@@ -556,6 +576,7 @@ namespace Tuzoltosag_v1
         private System.Windows.Forms.Timer tBlink;
         private System.Windows.Forms.Timer tSPort;
         private System.Windows.Forms.Button bSettings;
+        private System.Windows.Forms.Button bFecskendo2;
     }
 }
 

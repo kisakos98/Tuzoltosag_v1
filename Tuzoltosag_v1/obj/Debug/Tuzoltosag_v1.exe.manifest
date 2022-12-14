@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="728496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="729520">
       <assemblyIdentity name="Tuzoltosag_v1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>VicF8RADkhVuASx21Qg+NVrweR7xbgMgh3AysBEarOQ=</dsig:DigestValue>
+        <dsig:DigestValue>AVRT9ib3SmDsXZx6HEGGKX/d8QGVZ1uTqsXKq8gPh3E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1272,13 +1272,13 @@
       <dsig:DigestValue>1sejquM3vF5tXohqOOJAvd5dW/js/jRjTVtEdPncvNA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\utanfutoval_h.wav" size="56434">
+  <file name="sound\utanfutoval_h.wav" size="12189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZAjwtBzWpKQ8tBr77u9EWzKawr/v5loMhhqZMV0+gec=</dsig:DigestValue>
+      <dsig:DigestValue>5VyTrQIudoKnLdaIjDKR8R77oKc48NtuFI4CWr88OG4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\vegyi_riado.wav" size="284074">
@@ -1335,13 +1335,13 @@
       <dsig:DigestValue>7K3jsMmJ6Kk9pX7NjhnVF9QBsWsaalEgkhsyQFwFHnc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\vizsgalo_h.wav" size="12189">
+  <file name="sound\vizsgalo_h.wav" size="56434">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5VyTrQIudoKnLdaIjDKR8R77oKc48NtuFI4CWr88OG4=</dsig:DigestValue>
+      <dsig:DigestValue>ZAjwtBzWpKQ8tBr77u9EWzKawr/v5loMhhqZMV0+gec=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\vizszallito.wav" size="37524">

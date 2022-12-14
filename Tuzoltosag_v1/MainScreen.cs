@@ -27,7 +27,8 @@ namespace Tuzoltosag_v1
         static bool WirelessContoller = false;
         static bool WiredController = false;
 
-        static bool fecskendo = false;
+        static bool fecskendo1 = false;
+        static bool fecskendo2 = false;
         static bool erdoszer = false;
         static bool specErdoszer = false;
         static bool utanfuto = false;
@@ -36,16 +37,28 @@ namespace Tuzoltosag_v1
         static bool muszakiMenteshez = false;
         static bool riadolampa = false;
         static bool kulteriHangos = false;
-        bool Fecskendo
+        bool Fecskendo1
         {
             set
             {
-                fecskendo = value;
-                bFecskendo.Invalidate();
+                fecskendo1 = value;
+                bFecskendo1.Invalidate();
             }
             get 
             {
-                return fecskendo;
+                return fecskendo1;
+            }
+        }
+        bool Fecskendo2
+        {
+            set
+            {
+                fecskendo2 = value;
+                bFecskendo2.Invalidate();
+            }
+            get
+            {
+                return fecskendo2;
             }
         }
         bool Erdoszer
@@ -452,7 +465,9 @@ namespace Tuzoltosag_v1
             {
                 Osszesszer = true;
 
-                Fecskendo = true;
+                Fecskendo1 = true;
+
+                Fecskendo2 = true;
 
                 Erdoszer = true;
 
@@ -466,8 +481,11 @@ namespace Tuzoltosag_v1
                 Osszesszer = false;
                 bAll.BackColor = Color.Green;
 
-                Fecskendo = false;
-                bFecskendo.BackColor = Color.Green;
+                Fecskendo1 = false;
+                bFecskendo1.BackColor = Color.Green;
+
+                Fecskendo2 = false;
+                bFecskendo2.BackColor = Color.Green;
 
                 Erdoszer = false;
                 bErdoszer.BackColor = Color.Green;
@@ -485,16 +503,32 @@ namespace Tuzoltosag_v1
             SoundPlayer.Play(new string[] { Properties.Settings.Default.TestSound, "figyelem_gyakorlat.wav", "figyelem_gyakorlat.wav", "osszes_h.wav" }, false);
         }
 
-        private void bFecskendo_Click(object sender, EventArgs e)
+        private void bFecskendo1_Click(object sender, EventArgs e)
         {
-            if (!Fecskendo)
+            if (!Fecskendo1)
             {
-                Fecskendo = true;
+                Fecskendo1 = true;
             }
             else 
             {
-                Fecskendo = false;
-                bFecskendo.BackColor = Color.Green;
+                Fecskendo1 = false;
+                bFecskendo1.BackColor = Color.Green;
+
+                Osszesszer = false;
+                bAll.BackColor = Color.Green;
+            }
+        }
+
+        private void bFecskendo2_Click(object sender, EventArgs e)
+        {
+            if (!Fecskendo2)
+            {
+                Fecskendo2 = true;
+            }
+            else
+            {
+                Fecskendo2 = false;
+                bFecskendo2.BackColor = Color.Green;
 
                 Osszesszer = false;
                 bAll.BackColor = Color.Green;
@@ -548,7 +582,7 @@ namespace Tuzoltosag_v1
 
         private void bAlert_Click(object sender, EventArgs e)
         {
-            if (((Erdoszer) || (Fecskendo) || (SpecErdoszer) || (Utanfuto)) && ((Tuzesethez) || (MuszakiMenteshez)))
+            if (((Erdoszer) || (Fecskendo1) || (Fecskendo2) || (SpecErdoszer) || (Utanfuto)) && ((Tuzesethez) || (MuszakiMenteshez)))
             {
                 Riadolampa = true;
                 if (WirelessContoller)
@@ -565,9 +599,13 @@ namespace Tuzoltosag_v1
                     }
                 }
 
-                if (Fecskendo)
+                if (Fecskendo1)
                 {
-                    bFecskendo.BackColor = Color.Red;
+                    bFecskendo1.BackColor = Color.Red;
+                }
+                if (Fecskendo2)
+                {
+                    bFecskendo2.BackColor = Color.Red;
                 }
                 if (Erdoszer)
                 {
@@ -613,9 +651,16 @@ namespace Tuzoltosag_v1
                 }
                 else 
                 {
-                    if (Fecskendo)
+                    if (Fecskendo1)
                     {
                         soundlist.Add("1.wav");
+                        soundlist.Add("fecskendo.wav");
+                        soundlist.Add("fecskendo_h.wav");
+                    }
+
+                    if (Fecskendo2)
+                    {
+                        soundlist.Add("2.wav");
                         soundlist.Add("fecskendo.wav");
                         soundlist.Add("fecskendo_h.wav");
                     }
@@ -680,8 +725,11 @@ namespace Tuzoltosag_v1
             Erdoszer = false;
             bErdoszer.BackColor = Color.Green;
 
-            Fecskendo = false;
-            bFecskendo.BackColor = Color.Green;
+            Fecskendo1 = false;
+            bFecskendo1.BackColor = Color.Green;
+
+            Fecskendo2 = false;
+            bFecskendo2.BackColor = Color.Green;
 
             MuszakiMenteshez = false;
             bBackup.BackColor = Color.Lime;
@@ -921,12 +969,21 @@ namespace Tuzoltosag_v1
             Settings.ShowDialog();
         }
 
-        private void bFecskendo_Paint(object sender, PaintEventArgs e)
+        private void bFecskendo1_Paint(object sender, PaintEventArgs e)
         {
-            if (Fecskendo)
+            if (Fecskendo1)
             {
                 Graphics g = e.Graphics;
-                g.FillRectangle(Brushes.HotPink, new Rectangle(bFecskendo.Size.Width - 30, 1, 29, bFecskendo.Size.Height - 2));
+                g.FillRectangle(Brushes.HotPink, new Rectangle(bFecskendo1.Size.Width - 30, 1, 29, bFecskendo1.Size.Height - 2));
+            }
+        }
+
+        private void bFecskendo2_Paint(object sender, PaintEventArgs e)
+        {
+            if (Fecskendo2)
+            {
+                Graphics g = e.Graphics;
+                g.FillRectangle(Brushes.HotPink, new Rectangle(bFecskendo2.Size.Width - 30, 1, 29, bFecskendo2.Size.Height - 2));
             }
         }
 
@@ -1009,6 +1066,8 @@ namespace Tuzoltosag_v1
                 e.Graphics.DrawImage(qrCodeImage, (e.ClipRectangle.Width / 2) - (qrCodeImage.Width / 2), (e.ClipRectangle.Height / 2) + 50);
             }
         }
+
+
     }
 
     public static class ApplicationUpdate
