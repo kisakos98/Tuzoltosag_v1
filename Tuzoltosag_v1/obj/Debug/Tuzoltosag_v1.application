@@ -9,14 +9,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Tuzoltosag_v1.exe.manifest" size="75564">
+    <dependentAssembly dependencyType="install" codebase="Tuzoltosag_v1.exe.manifest" size="65747">
       <assemblyIdentity name="Tuzoltosag_v1.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="hu-HU" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>zTEmZEpS1nq7yB//mWaPWybwebnQtc8qNv1+pXvHUGQ=</dsig:DigestValue>
+        <dsig:DigestValue>nrEM+3frMEueji1Y3K+jce/6NQ0HduHDO1551UMX0RI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

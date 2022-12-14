@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="730544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="728496">
       <assemblyIdentity name="Tuzoltosag_v1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>nIUxV2BvYyD5vc/s4bIkuRHQ+MzUelXMB0pHVYJlFoI=</dsig:DigestValue>
+        <dsig:DigestValue>VicF8RADkhVuASx21Qg+NVrweR7xbgMgh3AysBEarOQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -289,60 +289,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>YSOpT2mfyjC05LykcY+Is8Lpc8kD+DrBX/dkTE/XODc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1_fecskendo_erdotuzes_muszaki_menteshez.wav" size="282764">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>14jWzCB/y3oOpve5vt8aX72bt4cjb7vFeJd5uI8KBQc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1_fecskendo_erdotuzes_tuzesethez.wav" size="274604">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ugG1HayGV+FLUhj5gnjUrL0WoDRnZKbXbydovi83HlM=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1_Fecskendo_muszaki_menteshez.wav" size="475590">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>P2Izr+YjE0FvxkTUhdA4lu0A/SGAnUW0S2h+jzFjuYY=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1_Fecskendo_Tuzesethez.wav" size="458736">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ElQP31cx5HRRa7wqI5eXOZlo/z7d8Pv9/9IGyqtaXIg=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1fecskendo_erdotuzes_erdotuzesmuszaki_mento_muszaki_menteshez.wav" size="665616">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>TsUGShyBXohCVm+cw25BIpkRzeEkwJuzJS+5ViYAcNc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\1fecskendo_erdotuzes_erdotuzesmuszaki_mento_tuzesethez.wav" size="648312">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>J9sZDv2CrBA5LBhkiuekB1e+h9QXrbR1ZnQ3oqkdSOs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\2.wav" size="23396">
@@ -669,42 +615,6 @@
       <dsig:DigestValue>WptMwVFRotftPjVwMP3IoidSEfMfel28l4A1yyHNCfU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\erdotuzes_erdotuzestmuszaki_mento_muszaki_menteshez.wav" size="589186">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KSRzXh0VFDd6t1wgmTC6yG3T7HAcJm13lB4CXOqwUvA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzes_erdotuzestmuszaki_mento_tuzesethez.wav" size="574218">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>nvyseBBp7gWMOWXPO9eZsrOSaBdCu9tlS5ODVQrgEYc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzes_erdotuzestmuszaki_mento_utanfutoval_muszaki_menteshez.wav" size="616698">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9v1gIVQyZN5wfwlEWa0g1Qtwaa6sUhv2V/axFX/yabI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzes_erdotuzestmuszaki_mento_utanfutoval_tuzesethez.wav" size="603620">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wqojWy9Bf5IOwtRxddmHu+LP6IOFC/OYPHFzS7SmF2s=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="sound\erdotuzes_h.wav" size="21033">
     <hash>
       <dsig:Transforms>
@@ -712,78 +622,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>Pnj3Y1wSl91msPXbR9o8lxvl1bByuIN5K1ljcL7NrhA=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\Erdotuzes_muszaki_menteshez.wav" size="452096">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>GbybtI2GRZqBAH9Dvs17ikwH4CoSU+5oVaiBBQ8ZOZI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\Erdotuzes_tuzesethez.wav" size="439712">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>JLJdnalZmVii1q6kfmIuKkavHQl4qfW0oVzIjbZmzoc=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzes_utanfutoval.wav" size="244884">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>2NY9E08cjkHL4XigibuLF7lXuXgOJmKSlffbF4Rz1/g=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzes_utanfutoval_tuzesethez.wav" size="237988">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6g0x4gXBD4ayDBjSdrKLEMG8VayCwBT++l2kDTiP944=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzesmuszaki_mento_muszaki_menteshez.wav" size="484170">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ON06bJWIl/oVIJR6le/+1V3pDKQ7sUI/Bbu43bSJR7U=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzesmuszaki_mento_tuzesethez.wav" size="473494">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>RfQD3bvUALE9o0uTsZ9xRf7au8DDDO+MO7KcWQEhW90=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzestmuszaki_mento_utanfutoval_muszaki_menteshez.wav" size="524260">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>KG+D7lpeBg49BKsydzknRPHASbN+16ucR7V9QdrQjD4=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\erdotuzestmuszaki_mento_utanfutoval_tuzesethez.wav" size="511082">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>gCH8nN7T4a733aZMT9r7i1Nb3nzlhTxycLM2E2CfOLs=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\fecskendo.wav" size="33460">
@@ -811,15 +649,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>s85dXVMjLfY/R+2snz44ZGu1yFqRcLJtVq9hIPPxfwI=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\figyelem_gyakorlat_riasztas.wav" size="240384">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>s8Dcyj819dcp77QOSgKV/cEr1s1g1jVkiy3puaV9LRQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\figyelem_probariasztas.wav" size="199456">
@@ -1137,15 +966,6 @@
       <dsig:DigestValue>N8YBCgTOogVtZkKymO78oMoUDDYF2lKXKALl9vBnxv0=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\Muszaki_menteshez.wav" size="423746">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>RyF0ZwOnWiUE14alSpd7mBOeitEcHZuFrJ2KMMIzkOw=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="sound\muszakikontener.wav" size="44800">
     <hash>
       <dsig:Transforms>
@@ -1234,24 +1054,6 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>jhJrFdmYS5nmfgidj6xg8k+nc7tuwyLIdZ2ixDxY58Q=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\Osszes_keszenletiszer_tuzesethez.wav" size="456310">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>luWjZ0T7OEz9s9sK6RNDiCIJN8wdMRNbMimUcmwhJK4=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="sound\Osszes_szer_muszaki_menteshez.wav" size="433506">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>a4QowO+eA0041IYok9hJJBda9qsHl8l6nWCffPF+kC0=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\porralolto.wav" size="34974">
@@ -1461,15 +1263,6 @@
       <dsig:DigestValue>qL7wNcm7QnQwbSN0ID0g5aRZrpUuDU62K8inI9tgTQg=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\Tuzesethez_riasztas.wav" size="407624">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>uUCYMkNMLTjdo4arkMu77hi+LljMUUqQQDxWLo7z/tA=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="sound\utanfutoval.wav" size="36244">
     <hash>
       <dsig:Transforms>
@@ -1479,13 +1272,13 @@
       <dsig:DigestValue>1sejquM3vF5tXohqOOJAvd5dW/js/jRjTVtEdPncvNA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\utanfutoval_h.wav" size="12189">
+  <file name="sound\utanfutoval_h.wav" size="56434">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>5VyTrQIudoKnLdaIjDKR8R77oKc48NtuFI4CWr88OG4=</dsig:DigestValue>
+      <dsig:DigestValue>ZAjwtBzWpKQ8tBr77u9EWzKawr/v5loMhhqZMV0+gec=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\vegyi_riado.wav" size="284074">
@@ -1542,13 +1335,13 @@
       <dsig:DigestValue>7K3jsMmJ6Kk9pX7NjhnVF9QBsWsaalEgkhsyQFwFHnc=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="sound\vizsgalo_h.wav" size="56434">
+  <file name="sound\vizsgalo_h.wav" size="12189">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>ZAjwtBzWpKQ8tBr77u9EWzKawr/v5loMhhqZMV0+gec=</dsig:DigestValue>
+      <dsig:DigestValue>5VyTrQIudoKnLdaIjDKR8R77oKc48NtuFI4CWr88OG4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="sound\vizszallito.wav" size="37524">

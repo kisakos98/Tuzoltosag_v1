@@ -271,24 +271,6 @@
     <Content Include="sound\1.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sound\1fecskendo_erdotuzes_erdotuzesmuszaki_mento_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\1fecskendo_erdotuzes_erdotuzesmuszaki_mento_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\1_fecskendo_erdotuzes_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\1_fecskendo_erdotuzes_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\1_Fecskendo_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\1_Fecskendo_Tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sound\2.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -397,43 +379,7 @@
     <Content Include="sound\erdotuzes.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sound\erdotuzesmuszaki_mento_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzesmuszaki_mento_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzestmuszaki_mento_utanfutoval_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzestmuszaki_mento_utanfutoval_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_erdotuzestmuszaki_mento_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_erdotuzestmuszaki_mento_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_erdotuzestmuszaki_mento_utanfutoval_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_erdotuzestmuszaki_mento_utanfutoval_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sound\erdotuzes_h.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\Erdotuzes_muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\Erdotuzes_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_utanfutoval.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\erdotuzes_utanfutoval_tuzesethez.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\fecskendo.wav">
@@ -443,9 +389,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\figyelem_gyakorlat.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\figyelem_gyakorlat_riasztas.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\figyelem_probariasztas.wav">
@@ -565,9 +508,6 @@
     <Content Include="sound\muszakimento_h.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="sound\Muszaki_menteshez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="sound\olajbaleseti.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -584,12 +524,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\osszes_h.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\Osszes_keszenletiszer_tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\Osszes_szer_muszaki_menteshez.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\porralolto.wav">
@@ -659,9 +593,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\tuzesethez.wav">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="sound\Tuzesethez_riasztas.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="sound\utanfutoval.wav">

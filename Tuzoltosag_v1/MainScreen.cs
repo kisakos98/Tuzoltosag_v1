@@ -11,6 +11,7 @@ using System.IO.Ports;
 using System.Deployment.Application;
 using System.Threading;
 using QRCoder;
+using System.Collections.Generic;
 
 namespace Tuzoltosag_v1
 {    
@@ -595,86 +596,51 @@ namespace Tuzoltosag_v1
 
                 bAlert.BackColor = Color.Red;
 
-                if ((Fecskendo) && (MuszakiMenteshez) && (!Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
+                List<string> soundlist = new List<string>();
+                soundlist.Add(Properties.Settings.Default.AlertSound);
+                soundlist.Add("figyelem_riasztas.wav");
+                soundlist.Add("figyelem_riasztas.wav");
+
+                if (Tuzesethez)
+                    soundlist.Add("tuzesethez.wav");
+                else
+                    soundlist.Add("karesethez.wav");
+
+                if (Osszesszer)
                 {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "1.wav", "fecskendo.wav", "osszes_h.wav" }, true);
+                    soundlist.Add("osszes.wav");
+                    soundlist.Add("osszes_h.wav");
                 }
-                else if ((Fecskendo) && (Tuzesethez) && (!Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
+                else 
                 {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "1.wav", "fecskendo.wav", "osszes_h.wav" }, true);
+                    if (Fecskendo)
+                    {
+                        soundlist.Add("1.wav");
+                        soundlist.Add("fecskendo.wav");
+                        soundlist.Add("fecskendo_h.wav");
+                    }
+
+                    if (Erdoszer)
+                    {
+                        soundlist.Add("erdotuzes.wav");
+                        soundlist.Add("erdotuzes_h.wav");
+                    }
+
+                    if (SpecErdoszer)
+                    {
+                        soundlist.Add("erdotuzes.wav");
+                        soundlist.Add("muszakimento.wav");
+                        soundlist.Add("muszakimento_h.wav");
+                    }
+
+                    if (Utanfuto)
+                    {
+                        soundlist.Add("utanfutoval.wav");
+                        soundlist.Add("utanfutoval_h.wav");
+                    }
                 }
-                else if ((!Fecskendo) && (Tuzesethez) && (Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Osszesszer) && (MuszakiMenteshez) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "karesethez.wav", "osszes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Osszesszer) && (Tuzesethez) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "osszes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Fecskendo) && (Tuzesethez) && (Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "1.wav", "fecskendo.wav", "fecskendo_h.wav", "erdotuzes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (!SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "1.wav", "fecskendo.wav", "fecskendo_h.wav", "erdotuzes.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (!SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (Tuzesethez) && (Erdoszer) && (!SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "1.wav", "fecskendo.wav", "fecskendo_h.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((Fecskendo) && (Tuzesethez) && (Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "1.wav", "fecskendo.wav", "fecskendo_h.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] {Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (Tuzesethez) && (Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (Erdoszer) && (SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (Tuzesethez) && (Erdoszer) && (SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "fecskendo_h.wav", "erdotuzes.wav", "muszakimento.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (!Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (Tuzesethez) && (!Erdoszer) && (SpecErdoszer) && (!Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "muszakimento.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (MuszakiMenteshez) && (!Erdoszer) && (SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "karesethez.wav", "erdotuzes.wav", "muszakimento.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
-                else if ((!Fecskendo) && (Tuzesethez) && (!Erdoszer) && (SpecErdoszer) && (Utanfuto))
-                {
-                    SoundPlayer.Play(new string[] { Properties.Settings.Default.AlertSound, "figyelem_riasztas.wav", "figyelem_riasztas.wav", "tuzesethez.wav", "erdotuzes.wav", "muszakimento.wav", "utanfutoval.wav", "osszes_h.wav" }, true);
-                }
+
+                SoundPlayer.Play(soundlist.ToArray(), true);
             }
         }
 
