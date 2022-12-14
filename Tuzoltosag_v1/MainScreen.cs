@@ -662,6 +662,7 @@ namespace Tuzoltosag_v1
                     {
                         soundlist.Add("2.wav");
                         soundlist.Add("fecskendo.wav");
+                        soundlist.Add("h2.wav");
                         soundlist.Add("fecskendo_h.wav");
                     }
 
@@ -681,7 +682,7 @@ namespace Tuzoltosag_v1
                     if (Utanfuto)
                     {
                         soundlist.Add("utanfutoval.wav");
-                        soundlist.Add("utanfutoval_h.wav");
+                        soundlist.Add("h3.wav");
                     }
                 }
 
@@ -823,7 +824,7 @@ namespace Tuzoltosag_v1
 
         private void bSzolagatp_Click(object sender, EventArgs e)
         {
-            SoundPlayer.Play(new string[] {"szolgalatparancsnok.wav"}, false);
+            SoundPlayer.Play(new string[] {"szolgalatparancsnok.wav", "h3.wav" }, false);
         }
 
         private void bChangeBegin_Click(object sender, EventArgs e)
