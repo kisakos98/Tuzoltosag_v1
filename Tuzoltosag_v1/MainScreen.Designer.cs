@@ -74,7 +74,7 @@ namespace Tuzoltosag_v1
             this.bExit.Location = new System.Drawing.Point(592, 923);
             this.bExit.Margin = new System.Windows.Forms.Padding(2);
             this.bExit.Name = "bExit";
-            this.bExit.Size = new System.Drawing.Size(110, 59);
+            this.bExit.Size = new System.Drawing.Size(110, 45);
             this.bExit.TabIndex = 1;
             this.bExit.Text = "Kilépés";
             this.bExit.UseVisualStyleBackColor = true;
@@ -88,10 +88,10 @@ namespace Tuzoltosag_v1
             this.bBackup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bBackup.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bBackup.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bBackup.Location = new System.Drawing.Point(505, 191);
+            this.bBackup.Location = new System.Drawing.Point(505, 170);
             this.bBackup.Margin = new System.Windows.Forms.Padding(2);
             this.bBackup.Name = "bBackup";
-            this.bBackup.Size = new System.Drawing.Size(283, 59);
+            this.bBackup.Size = new System.Drawing.Size(283, 45);
             this.bBackup.TabIndex = 3;
             this.bBackup.Text = "Műszaki mentéshez";
             this.bBackup.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@ namespace Tuzoltosag_v1
             this.lTime.ForeColor = System.Drawing.Color.White;
             this.lTime.Location = new System.Drawing.Point(922, 9);
             this.lTime.Name = "lTime";
-            this.lTime.Size = new System.Drawing.Size(0, 91);
+            this.lTime.Size = new System.Drawing.Size(0, 73);
             this.lTime.TabIndex = 5;
             // 
             // tTime
@@ -122,7 +122,7 @@ namespace Tuzoltosag_v1
             this.lDate.ForeColor = System.Drawing.Color.White;
             this.lDate.Location = new System.Drawing.Point(76, 23);
             this.lDate.Name = "lDate";
-            this.lDate.Size = new System.Drawing.Size(0, 46);
+            this.lDate.Size = new System.Drawing.Size(0, 37);
             this.lDate.TabIndex = 6;
             // 
             // bPractice
@@ -133,10 +133,10 @@ namespace Tuzoltosag_v1
             this.bPractice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bPractice.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bPractice.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bPractice.Location = new System.Drawing.Point(505, 672);
+            this.bPractice.Location = new System.Drawing.Point(505, 744);
             this.bPractice.Margin = new System.Windows.Forms.Padding(2);
             this.bPractice.Name = "bPractice";
-            this.bPractice.Size = new System.Drawing.Size(283, 59);
+            this.bPractice.Size = new System.Drawing.Size(283, 45);
             this.bPractice.TabIndex = 8;
             this.bPractice.Text = "Gyakorlat";
             this.bPractice.UseVisualStyleBackColor = false;
@@ -150,10 +150,10 @@ namespace Tuzoltosag_v1
             this.bAlert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bAlert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bAlert.Location = new System.Drawing.Point(83, 755);
+            this.bAlert.Location = new System.Drawing.Point(83, 804);
             this.bAlert.Margin = new System.Windows.Forms.Padding(2);
             this.bAlert.Name = "bAlert";
-            this.bAlert.Size = new System.Drawing.Size(269, 59);
+            this.bAlert.Size = new System.Drawing.Size(269, 45);
             this.bAlert.TabIndex = 13;
             this.bAlert.Text = "Riasztás";
             this.bAlert.UseVisualStyleBackColor = false;
@@ -167,10 +167,10 @@ namespace Tuzoltosag_v1
             this.bProbaAlert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bProbaAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bProbaAlert.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bProbaAlert.Location = new System.Drawing.Point(83, 840);
+            this.bProbaAlert.Location = new System.Drawing.Point(83, 864);
             this.bProbaAlert.Margin = new System.Windows.Forms.Padding(2);
             this.bProbaAlert.Name = "bProbaAlert";
-            this.bProbaAlert.Size = new System.Drawing.Size(269, 59);
+            this.bProbaAlert.Size = new System.Drawing.Size(269, 45);
             this.bProbaAlert.TabIndex = 14;
             this.bProbaAlert.Text = "Próbariasztás";
             this.bProbaAlert.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@ namespace Tuzoltosag_v1
             this.bDeleteAlert.Location = new System.Drawing.Point(83, 923);
             this.bDeleteAlert.Margin = new System.Windows.Forms.Padding(2);
             this.bDeleteAlert.Name = "bDeleteAlert";
-            this.bDeleteAlert.Size = new System.Drawing.Size(269, 59);
+            this.bDeleteAlert.Size = new System.Drawing.Size(269, 45);
             this.bDeleteAlert.TabIndex = 15;
             this.bDeleteAlert.Text = "Riasztás törlése";
             this.bDeleteAlert.UseVisualStyleBackColor = false;
@@ -204,7 +204,7 @@ namespace Tuzoltosag_v1
             this.bOutsideLoud.Location = new System.Drawing.Point(925, 106);
             this.bOutsideLoud.Margin = new System.Windows.Forms.Padding(2);
             this.bOutsideLoud.Name = "bOutsideLoud";
-            this.bOutsideLoud.Size = new System.Drawing.Size(267, 59);
+            this.bOutsideLoud.Size = new System.Drawing.Size(267, 45);
             this.bOutsideLoud.TabIndex = 16;
             this.bOutsideLoud.Text = "Kültéri hangos";
             this.bOutsideLoud.UseVisualStyleBackColor = false;
@@ -219,10 +219,10 @@ namespace Tuzoltosag_v1
             this.bAlertLamp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAlertLamp.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bAlertLamp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bAlertLamp.Location = new System.Drawing.Point(925, 191);
+            this.bAlertLamp.Location = new System.Drawing.Point(925, 170);
             this.bAlertLamp.Margin = new System.Windows.Forms.Padding(2);
             this.bAlertLamp.Name = "bAlertLamp";
-            this.bAlertLamp.Size = new System.Drawing.Size(267, 59);
+            this.bAlertLamp.Size = new System.Drawing.Size(267, 45);
             this.bAlertLamp.TabIndex = 17;
             this.bAlertLamp.Text = "Riadólámpa";
             this.bAlertLamp.UseVisualStyleBackColor = false;
@@ -237,10 +237,10 @@ namespace Tuzoltosag_v1
             this.bAlertSound.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAlertSound.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bAlertSound.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bAlertSound.Location = new System.Drawing.Point(925, 274);
+            this.bAlertSound.Location = new System.Drawing.Point(925, 234);
             this.bAlertSound.Margin = new System.Windows.Forms.Padding(2);
             this.bAlertSound.Name = "bAlertSound";
-            this.bAlertSound.Size = new System.Drawing.Size(267, 59);
+            this.bAlertSound.Size = new System.Drawing.Size(267, 45);
             this.bAlertSound.TabIndex = 18;
             this.bAlertSound.Text = "Riadóhang";
             this.bAlertSound.UseVisualStyleBackColor = false;
@@ -254,10 +254,10 @@ namespace Tuzoltosag_v1
             this.bSzolagatp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSzolagatp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bSzolagatp.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bSzolagatp.Location = new System.Drawing.Point(925, 673);
+            this.bSzolagatp.Location = new System.Drawing.Point(925, 745);
             this.bSzolagatp.Margin = new System.Windows.Forms.Padding(2);
             this.bSzolagatp.Name = "bSzolagatp";
-            this.bSzolagatp.Size = new System.Drawing.Size(267, 59);
+            this.bSzolagatp.Size = new System.Drawing.Size(267, 45);
             this.bSzolagatp.TabIndex = 19;
             this.bSzolagatp.Text = "Szolgálatparancsnok";
             this.bSzolagatp.UseVisualStyleBackColor = false;
@@ -271,10 +271,10 @@ namespace Tuzoltosag_v1
             this.bChangeBegin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bChangeBegin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bChangeBegin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bChangeBegin.Location = new System.Drawing.Point(925, 755);
+            this.bChangeBegin.Location = new System.Drawing.Point(925, 804);
             this.bChangeBegin.Margin = new System.Windows.Forms.Padding(2);
             this.bChangeBegin.Name = "bChangeBegin";
-            this.bChangeBegin.Size = new System.Drawing.Size(267, 59);
+            this.bChangeBegin.Size = new System.Drawing.Size(267, 45);
             this.bChangeBegin.TabIndex = 20;
             this.bChangeBegin.Text = "Váltás kezdete";
             this.bChangeBegin.UseVisualStyleBackColor = false;
@@ -288,10 +288,10 @@ namespace Tuzoltosag_v1
             this.bChangeEnd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bChangeEnd.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bChangeEnd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bChangeEnd.Location = new System.Drawing.Point(925, 840);
+            this.bChangeEnd.Location = new System.Drawing.Point(925, 864);
             this.bChangeEnd.Margin = new System.Windows.Forms.Padding(2);
             this.bChangeEnd.Name = "bChangeEnd";
-            this.bChangeEnd.Size = new System.Drawing.Size(267, 59);
+            this.bChangeEnd.Size = new System.Drawing.Size(267, 45);
             this.bChangeEnd.TabIndex = 21;
             this.bChangeEnd.Text = "Váltás vége";
             this.bChangeEnd.UseVisualStyleBackColor = false;
@@ -308,7 +308,7 @@ namespace Tuzoltosag_v1
             this.bWakeup.Location = new System.Drawing.Point(925, 923);
             this.bWakeup.Margin = new System.Windows.Forms.Padding(2);
             this.bWakeup.Name = "bWakeup";
-            this.bWakeup.Size = new System.Drawing.Size(267, 59);
+            this.bWakeup.Size = new System.Drawing.Size(267, 45);
             this.bWakeup.TabIndex = 22;
             this.bWakeup.Text = "Ébresztő";
             this.bWakeup.UseVisualStyleBackColor = false;
@@ -343,7 +343,7 @@ namespace Tuzoltosag_v1
             this.lAlarmText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lAlarmText.Location = new System.Drawing.Point(474, 344);
             this.lAlarmText.Name = "lAlarmText";
-            this.lAlarmText.Size = new System.Drawing.Size(526, 135);
+            this.lAlarmText.Size = new System.Drawing.Size(420, 108);
             this.lAlarmText.TabIndex = 0;
             this.lAlarmText.Text = "Riasztás";
             // 
@@ -360,10 +360,10 @@ namespace Tuzoltosag_v1
             this.bUtanfuto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bUtanfuto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bUtanfuto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bUtanfuto.Location = new System.Drawing.Point(83, 447);
+            this.bUtanfuto.Location = new System.Drawing.Point(83, 358);
             this.bUtanfuto.Margin = new System.Windows.Forms.Padding(2);
             this.bUtanfuto.Name = "bUtanfuto";
-            this.bUtanfuto.Size = new System.Drawing.Size(269, 59);
+            this.bUtanfuto.Size = new System.Drawing.Size(269, 45);
             this.bUtanfuto.TabIndex = 12;
             this.bUtanfuto.Text = "Utánfutó";
             this.bUtanfuto.UseVisualStyleBackColor = false;
@@ -377,10 +377,10 @@ namespace Tuzoltosag_v1
             this.bSpecErdoszer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSpecErdoszer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bSpecErdoszer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bSpecErdoszer.Location = new System.Drawing.Point(83, 360);
+            this.bSpecErdoszer.Location = new System.Drawing.Point(83, 298);
             this.bSpecErdoszer.Margin = new System.Windows.Forms.Padding(2);
             this.bSpecErdoszer.Name = "bSpecErdoszer";
-            this.bSpecErdoszer.Size = new System.Drawing.Size(269, 59);
+            this.bSpecErdoszer.Size = new System.Drawing.Size(269, 45);
             this.bSpecErdoszer.TabIndex = 11;
             this.bSpecErdoszer.Text = "Speciális Erdőszer";
             this.bSpecErdoszer.UseVisualStyleBackColor = false;
@@ -394,10 +394,10 @@ namespace Tuzoltosag_v1
             this.bErdoszer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bErdoszer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bErdoszer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bErdoszer.Location = new System.Drawing.Point(83, 274);
+            this.bErdoszer.Location = new System.Drawing.Point(83, 234);
             this.bErdoszer.Margin = new System.Windows.Forms.Padding(2);
             this.bErdoszer.Name = "bErdoszer";
-            this.bErdoszer.Size = new System.Drawing.Size(269, 59);
+            this.bErdoszer.Size = new System.Drawing.Size(269, 45);
             this.bErdoszer.TabIndex = 10;
             this.bErdoszer.Text = "Erdőszer";
             this.bErdoszer.UseVisualStyleBackColor = false;
@@ -412,10 +412,10 @@ namespace Tuzoltosag_v1
             this.bAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bAll.Location = new System.Drawing.Point(505, 274);
+            this.bAll.Location = new System.Drawing.Point(505, 234);
             this.bAll.Margin = new System.Windows.Forms.Padding(2);
             this.bAll.Name = "bAll";
-            this.bAll.Size = new System.Drawing.Size(283, 59);
+            this.bAll.Size = new System.Drawing.Size(283, 45);
             this.bAll.TabIndex = 7;
             this.bAll.Text = "Összes szer";
             this.bAll.UseVisualStyleBackColor = false;
@@ -433,7 +433,7 @@ namespace Tuzoltosag_v1
             this.bFire.Location = new System.Drawing.Point(505, 106);
             this.bFire.Margin = new System.Windows.Forms.Padding(2);
             this.bFire.Name = "bFire";
-            this.bFire.Size = new System.Drawing.Size(283, 59);
+            this.bFire.Size = new System.Drawing.Size(283, 45);
             this.bFire.TabIndex = 2;
             this.bFire.Text = "Tűzesethez";
             this.bFire.UseVisualStyleBackColor = true;
@@ -450,7 +450,7 @@ namespace Tuzoltosag_v1
             this.bFecskendo1.Location = new System.Drawing.Point(83, 106);
             this.bFecskendo1.Margin = new System.Windows.Forms.Padding(2);
             this.bFecskendo1.Name = "bFecskendo1";
-            this.bFecskendo1.Size = new System.Drawing.Size(269, 59);
+            this.bFecskendo1.Size = new System.Drawing.Size(269, 45);
             this.bFecskendo1.TabIndex = 9;
             this.bFecskendo1.Text = "1. Fecskendő";
             this.bFecskendo1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -473,7 +473,7 @@ namespace Tuzoltosag_v1
             this.bSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.bSettings.Image = ((System.Drawing.Image)(resources.GetObject("bSettings.Image")));
-            this.bSettings.Location = new System.Drawing.Point(592, 840);
+            this.bSettings.Location = new System.Drawing.Point(592, 850);
             this.bSettings.Margin = new System.Windows.Forms.Padding(2);
             this.bSettings.Name = "bSettings";
             this.bSettings.Size = new System.Drawing.Size(110, 59);
@@ -488,10 +488,10 @@ namespace Tuzoltosag_v1
             this.bFecskendo2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bFecskendo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bFecskendo2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bFecskendo2.Location = new System.Drawing.Point(84, 191);
+            this.bFecskendo2.Location = new System.Drawing.Point(84, 170);
             this.bFecskendo2.Margin = new System.Windows.Forms.Padding(2);
             this.bFecskendo2.Name = "bFecskendo2";
-            this.bFecskendo2.Size = new System.Drawing.Size(269, 59);
+            this.bFecskendo2.Size = new System.Drawing.Size(269, 45);
             this.bFecskendo2.TabIndex = 25;
             this.bFecskendo2.Text = "2. Fecskendő";
             this.bFecskendo2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
@@ -540,6 +540,7 @@ namespace Tuzoltosag_v1
             this.Name = "Alarm";
             this.Text = "Tűzoltóság";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Alarm_FormClosing);
             this.pAlarm.ResumeLayout(false);
             this.pAlarm.PerformLayout();
             this.ResumeLayout(false);

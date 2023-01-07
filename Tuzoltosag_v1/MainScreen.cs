@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Management;
 using System.IO.Ports;
+using System.IO;
 using System.Deployment.Application;
 using System.Threading;
 using QRCoder;
@@ -169,6 +170,23 @@ namespace Tuzoltosag_v1
         {
             InitializeComponent();
 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            path = Path.Combine(path, "tuzoltosag_logs.txt"); ;
+            // This text is added only once to the file.
+            if (!File.Exists(path))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine("This is a log file for the tuzoltosag app!");
+                }
+            }
+
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine("Starting: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));
+            }
+
             lAlarmText.Location = new Point((ClientSize.Width / 2) - (lAlarmText.Width / 5), (ClientSize.Height / 3) - (lAlarmText.Height / 2));
 
             tSPort.Enabled = false;
@@ -290,7 +308,8 @@ namespace Tuzoltosag_v1
             {
                 Thread.Sleep(200);
                 var msg = IC.GetMessage(e.MessageCount - 1);
-                if (msg.Subject.Equals("Riasztási lap") && msg.From.Address.Equals("emailgw@katved.gov.hu"))
+                //if (msg.Subject.Equals("Riasztási lap") && msg.From.Address.Equals("emailgw@katved.gov.hu"))
+                if (msg.Subject.Equals("Riasztási lap"))
                 {
 
                     // Get location
@@ -1068,7 +1087,27 @@ namespace Tuzoltosag_v1
             }
         }
 
+        private void Alarm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            // Log Closing time
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            path = Path.Combine(path, "tuzoltosag_logs.txt"); ;
+            // This text is added only once to the file.
+            if (!File.Exists(path))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(path))
+                {
+                    sw.WriteLine("This is a log file for the tuzoltosag app!");
+                }
+            }
 
+            using (StreamWriter sw = File.AppendText(path))
+            {
+                sw.WriteLine("Closing: " + DateTime.Now.ToString("dd/MM/yyyy hh:mm:ss"));
+                sw.WriteLine("");
+            }
+        }
     }
 
     public static class ApplicationUpdate
