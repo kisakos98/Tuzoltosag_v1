@@ -118,7 +118,7 @@
             this.gBSound.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.gBSound.Location = new System.Drawing.Point(133, 94);
             this.gBSound.Name = "gBSound";
-            this.gBSound.Size = new System.Drawing.Size(539, 238);
+            this.gBSound.Size = new System.Drawing.Size(539, 284);
             this.gBSound.TabIndex = 6;
             this.gBSound.TabStop = false;
             this.gBSound.Text = "Hang";

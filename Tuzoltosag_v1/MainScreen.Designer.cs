@@ -106,7 +106,7 @@ namespace Tuzoltosag_v1
             this.lTime.ForeColor = System.Drawing.Color.White;
             this.lTime.Location = new System.Drawing.Point(922, 9);
             this.lTime.Name = "lTime";
-            this.lTime.Size = new System.Drawing.Size(0, 73);
+            this.lTime.Size = new System.Drawing.Size(0, 91);
             this.lTime.TabIndex = 5;
             // 
             // tTime
@@ -122,7 +122,7 @@ namespace Tuzoltosag_v1
             this.lDate.ForeColor = System.Drawing.Color.White;
             this.lDate.Location = new System.Drawing.Point(76, 23);
             this.lDate.Name = "lDate";
-            this.lDate.Size = new System.Drawing.Size(0, 37);
+            this.lDate.Size = new System.Drawing.Size(0, 46);
             this.lDate.TabIndex = 6;
             // 
             // bPractice
@@ -343,7 +343,7 @@ namespace Tuzoltosag_v1
             this.lAlarmText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lAlarmText.Location = new System.Drawing.Point(474, 344);
             this.lAlarmText.Name = "lAlarmText";
-            this.lAlarmText.Size = new System.Drawing.Size(420, 108);
+            this.lAlarmText.Size = new System.Drawing.Size(526, 135);
             this.lAlarmText.TabIndex = 0;
             this.lAlarmText.Text = "Riasztás";
             // 
@@ -506,7 +506,6 @@ namespace Tuzoltosag_v1
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1277, 1029);
-            this.Controls.Add(this.bFecskendo2);
             this.Controls.Add(this.pAlarm);
             this.Controls.Add(this.bSettings);
             this.Controls.Add(this.bWakeup);
@@ -530,6 +529,7 @@ namespace Tuzoltosag_v1
             this.Controls.Add(this.bFire);
             this.Controls.Add(this.bExit);
             this.Controls.Add(this.bFecskendo1);
+            this.Controls.Add(this.bFecskendo2);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
