@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Tuzoltosag_v1.exe" version="1.0.0.5" publicKeyToken="0000000000000000" language="hu-HU" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="Tuzoltosag_v1.exe" version="1.0.0.6" publicKeyToken="0000000000000000" language="hu-HU" processorArchitecture="msil" type="win32" />
   <description asmv2:iconFile="tuzoltosag.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
@@ -271,14 +271,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="730544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Tuzoltosag_v1.exe" size="732592">
       <assemblyIdentity name="Tuzoltosag_v1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>X0T51Jjm6ybc3Xn01RJ/dA3j1Lt+lJeEqJ2pDZI/lZM=</dsig:DigestValue>
+        <dsig:DigestValue>YNOhmWKhpyGqfcxKXyUCl/PTw/Sms2r0MjAmjdGWA0M=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -1371,13 +1371,13 @@
       <dsig:DigestValue>IP4yt6QPXa0q7Xl1VbUEM0TDrdv9vO0Zr8X8IwylVoU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Tuzoltosag_v1.exe.config" size="1349">
+  <file name="Tuzoltosag_v1.exe.config" size="1596">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>1vXUYWzjUfc7UUu2EVmcagyuw7tzjORamA5fMTE87Rg=</dsig:DigestValue>
+      <dsig:DigestValue>zCD+afs76PFCev5gSI+cztrE8tKr/D8PqabFbYDaxJA=</dsig:DigestValue>
     </hash>
   </file>
   <compatibility xmlns="urn:schemas-microsoft-com:compatibility.v1">

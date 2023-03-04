@@ -34,6 +34,8 @@
             this.lAlertSound = new System.Windows.Forms.Label();
             this.cBAlertSounds = new System.Windows.Forms.ComboBox();
             this.gBSound = new System.Windows.Forms.GroupBox();
+            this.Delay_nUD = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
             this.bTestSound = new System.Windows.Forms.Button();
             this.cBTestSounds = new System.Windows.Forms.ComboBox();
             this.lTestSound = new System.Windows.Forms.Label();
@@ -44,7 +46,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bUpdate = new System.Windows.Forms.Button();
             this.lUpdate = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AlertTurnoffDelay_nUD = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.gBSound.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Delay_nUD)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AlertTurnoffDelay_nUD)).BeginInit();
             this.SuspendLayout();
             // 
             // bCancel
@@ -55,7 +63,7 @@
             this.bCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bCancel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bCancel.Location = new System.Drawing.Point(11, 380);
+            this.bCancel.Location = new System.Drawing.Point(11, 482);
             this.bCancel.Margin = new System.Windows.Forms.Padding(2);
             this.bCancel.Name = "bCancel";
             this.bCancel.Size = new System.Drawing.Size(110, 59);
@@ -72,7 +80,7 @@
             this.bSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.bSave.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.bSave.Location = new System.Drawing.Point(679, 380);
+            this.bSave.Location = new System.Drawing.Point(679, 482);
             this.bSave.Margin = new System.Windows.Forms.Padding(2);
             this.bSave.Name = "bSave";
             this.bSave.Size = new System.Drawing.Size(110, 59);
@@ -105,6 +113,8 @@
             // gBSound
             // 
             this.gBSound.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gBSound.Controls.Add(this.Delay_nUD);
+            this.gBSound.Controls.Add(this.label2);
             this.gBSound.Controls.Add(this.bTestSound);
             this.gBSound.Controls.Add(this.cBTestSounds);
             this.gBSound.Controls.Add(this.lTestSound);
@@ -116,12 +126,39 @@
             this.gBSound.Controls.Add(this.cBAlertSounds);
             this.gBSound.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gBSound.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.gBSound.Location = new System.Drawing.Point(133, 94);
+            this.gBSound.Location = new System.Drawing.Point(130, 77);
             this.gBSound.Name = "gBSound";
             this.gBSound.Size = new System.Drawing.Size(539, 284);
             this.gBSound.TabIndex = 6;
             this.gBSound.TabStop = false;
             this.gBSound.Text = "Hang";
+            // 
+            // Delay_nUD
+            // 
+            this.Delay_nUD.Location = new System.Drawing.Point(348, 234);
+            this.Delay_nUD.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Delay_nUD.Name = "Delay_nUD";
+            this.Delay_nUD.Size = new System.Drawing.Size(50, 24);
+            this.Delay_nUD.TabIndex = 15;
+            this.Delay_nUD.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(13, 229);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(246, 29);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Hang késleltetés [mp]";
             // 
             // bTestSound
             // 
@@ -257,12 +294,59 @@
             this.lUpdate.Text = "!";
             this.lUpdate.Visible = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox1.Controls.Add(this.AlertTurnoffDelay_nUD);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.groupBox1.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.groupBox1.Location = new System.Drawing.Point(131, 367);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(539, 99);
+            this.groupBox1.TabIndex = 17;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Riasztás";
+            // 
+            // AlertTurnoffDelay_nUD
+            // 
+            this.AlertTurnoffDelay_nUD.Location = new System.Drawing.Point(347, 42);
+            this.AlertTurnoffDelay_nUD.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.AlertTurnoffDelay_nUD.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.AlertTurnoffDelay_nUD.Name = "AlertTurnoffDelay_nUD";
+            this.AlertTurnoffDelay_nUD.Size = new System.Drawing.Size(50, 24);
+            this.AlertTurnoffDelay_nUD.TabIndex = 15;
+            this.AlertTurnoffDelay_nUD.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label3.Location = new System.Drawing.Point(12, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(228, 29);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Lekapcsolási idő [p]";
+            // 
             // SettingsScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 552);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lUpdate);
             this.Controls.Add(this.bUpdate);
             this.Controls.Add(this.label1);
@@ -277,6 +361,10 @@
             this.Text = "SettingsScreen";
             this.gBSound.ResumeLayout(false);
             this.gBSound.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Delay_nUD)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AlertTurnoffDelay_nUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,5 +387,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button bUpdate;
         private System.Windows.Forms.Label lUpdate;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.NumericUpDown Delay_nUD;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.NumericUpDown AlertTurnoffDelay_nUD;
+        private System.Windows.Forms.Label label3;
     }
 }

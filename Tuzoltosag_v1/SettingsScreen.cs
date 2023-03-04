@@ -23,6 +23,10 @@ namespace Tuzoltosag_v1
             cBTestSounds.Items.Add("bevezeto_morricone.wav");
             cBTestSounds.Text = Properties.Settings.Default.TestSound;
 
+            Delay_nUD.Value = Properties.Settings.Default.SoundDelay;
+
+            AlertTurnoffDelay_nUD.Value = Properties.Settings.Default.AlertTurnoffDelay;
+
             lUpdate.Visible = ApplicationUpdate.UpdateRequired;
         }
 
@@ -37,6 +41,8 @@ namespace Tuzoltosag_v1
             Properties.Settings.Default.AlertSound = cBAlertSounds.Text;
             Properties.Settings.Default.WakeupSound = cBWakeupSounds.Text;
             Properties.Settings.Default.TestSound = cBTestSounds.Text;
+            Properties.Settings.Default.SoundDelay = (int)Delay_nUD.Value;
+            Properties.Settings.Default.AlertTurnoffDelay = (int)AlertTurnoffDelay_nUD.Value;
             Properties.Settings.Default.Save();
             SoundPlayer.Stop();
             this.Close();

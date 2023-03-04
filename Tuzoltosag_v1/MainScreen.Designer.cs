@@ -60,6 +60,7 @@ namespace Tuzoltosag_v1
             this.tSPort = new System.Windows.Forms.Timer(this.components);
             this.bSettings = new System.Windows.Forms.Button();
             this.bFecskendo2 = new System.Windows.Forms.Button();
+            this.tAlertTurnoffTimer = new System.Windows.Forms.Timer(this.components);
             this.pAlarm.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -499,6 +500,11 @@ namespace Tuzoltosag_v1
             this.bFecskendo2.Click += new System.EventHandler(this.bFecskendo2_Click);
             this.bFecskendo2.Paint += new System.Windows.Forms.PaintEventHandler(this.bFecskendo2_Paint);
             // 
+            // tAlertTurnoffTimer
+            // 
+            this.tAlertTurnoffTimer.Enabled = true;
+            this.tAlertTurnoffTimer.Interval = 120000;
+            // 
             // Alarm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -578,6 +584,7 @@ namespace Tuzoltosag_v1
         private System.Windows.Forms.Timer tSPort;
         private System.Windows.Forms.Button bSettings;
         private System.Windows.Forms.Button bFecskendo2;
+        private System.Windows.Forms.Timer tAlertTurnoffTimer;
     }
 }
 

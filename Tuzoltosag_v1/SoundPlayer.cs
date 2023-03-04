@@ -53,7 +53,7 @@ namespace Tuzoltosag_v1
                 
                 if(WithDelay)
                 {
-                    Thread.Sleep(3000);
+                    Thread.Sleep(Properties.Settings.Default.SoundDelay*1000);
                 }
 
                 foreach (string sound in sounds)
