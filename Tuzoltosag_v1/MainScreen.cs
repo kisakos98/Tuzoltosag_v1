@@ -309,7 +309,7 @@ namespace Tuzoltosag_v1
                 Thread.Sleep(200);
                 var msg = IC.GetMessage(e.MessageCount - 1);
                 //if (msg.Subject.Equals("Riasztási lap") && msg.From.Address.Equals("emailgw@katved.gov.hu"))
-                if (msg.Subject.Equals("Riasztási lap"))
+                if (msg.Subject.Contains("Riasztási lap"))
                 {
 
                     // Get location
