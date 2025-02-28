@@ -47,7 +47,6 @@ namespace Tuzoltosag_v1
             this.bChangeBegin = new System.Windows.Forms.Button();
             this.bChangeEnd = new System.Windows.Forms.Button();
             this.bWakeup = new System.Windows.Forms.Button();
-            this.tConnection = new System.Windows.Forms.Timer(this.components);
             this.pAlarm = new System.Windows.Forms.Panel();
             this.lAlarmText = new System.Windows.Forms.Label();
             this.tBlink = new System.Windows.Forms.Timer(this.components);
@@ -315,12 +314,6 @@ namespace Tuzoltosag_v1
             this.bWakeup.UseVisualStyleBackColor = false;
             this.bWakeup.Click += new System.EventHandler(this.bWakeup_Click);
             // 
-            // tConnection
-            // 
-            this.tConnection.Enabled = true;
-            this.tConnection.Interval = 20000;
-            this.tConnection.Tick += new System.EventHandler(this.tConnection_Tick);
-            // 
             // pAlarm
             // 
             this.pAlarm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -577,7 +570,6 @@ namespace Tuzoltosag_v1
         private System.Windows.Forms.Button bChangeBegin;
         private System.Windows.Forms.Button bChangeEnd;
         private System.Windows.Forms.Button bWakeup;
-        private System.Windows.Forms.Timer tConnection;
         private System.Windows.Forms.Panel pAlarm;
         private System.Windows.Forms.Label lAlarmText;
         private System.Windows.Forms.Timer tBlink;

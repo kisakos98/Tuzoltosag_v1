@@ -3,7 +3,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using AE.Net.Mail;
 using System.Net;
 using System.Net.Http;
 using System.Management;
@@ -11,8 +10,17 @@ using System.IO.Ports;
 using System.IO;
 using System.Deployment.Application;
 using System.Threading;
+using System.Threading.Tasks;
 using QRCoder;
 using System.Collections.Generic;
+using static QRCoder.PayloadGenerator;
+using Google.Apis.Auth.OAuth2;
+using MailKit.Net.Imap;
+using MailKit.Security;
+using MailKit;
+using MimeKit;
+using Google.Apis.Util.Store;
+using Google.Apis.Auth.OAuth2.Flows;
 
 namespace Tuzoltosag_v1
 {    
@@ -160,18 +168,92 @@ namespace Tuzoltosag_v1
         }
 
         static ImapClient IC = null;
-        static string ImapHost = "outlook.office365.com";
-        static string ImapEmail = "riasztasszomolya@hotmail.com";
-        static string ImapPassword = "rsygnofflpqrzuss";
+        //static string ImapHost = "imap-mail.outlook.com";
+        static string ImapHost = "imap.gmail.com";
+        //static string ImapEmail = "riasztasszomolya@hotmail.com";
+        static string ImapEmail = "riasztasszomolya@gmail.com";
+        //static string ImapPassword = "rsygnofflpqrzuss";
+        //static string ImapPassword = "qldtwawscqpsvqbp";
 
         static SerialPort SPort = null;
+
+        async Task PollEmails()
+        {
+            try
+            {
+                const string ImapEmail = "riasztasszomolya@gmail.com";
+
+                var clientSecrets = new ClientSecrets
+                {
+                    ClientId = "1079101842870-2vesrjo9nl78rs0h7893ed6ini0knb4l.apps.googleusercontent.com",
+                    ClientSecret = "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"
+                };
+
+                var codeFlow = new GoogleAuthorizationCodeFlow(new GoogleAuthorizationCodeFlow.Initializer
+                {
+                    // Cache tokens in ~/.local/share/google-filedatastore/CredentialCacheFolder on Linux/Mac
+                    DataStore = new FileDataStore("CredentialCacheFolder", false),
+                    Scopes = new[] { "https://mail.google.com/" },
+                    ClientSecrets = clientSecrets,
+                    LoginHint = ImapEmail
+                });
+
+                var codeReceiver = new LocalServerCodeReceiver();
+                var authCode = new AuthorizationCodeInstalledApp(codeFlow, codeReceiver);
+
+                var credential = await authCode.AuthorizeAsync(ImapEmail, CancellationToken.None);
+
+                if (credential.Token.IsStale)
+                    await credential.RefreshTokenAsync(CancellationToken.None);
+
+                var oauth2 = new SaslMechanismOAuthBearer(credential.UserId, credential.Token.AccessToken);
+
+                using (var client = new ImapClient())
+                {
+                    await client.ConnectAsync(ImapHost, 993, SecureSocketOptions.SslOnConnect);
+                    await client.AuthenticateAsync(oauth2);
+
+                    var inbox = client.Inbox;
+                    await inbox.OpenAsync(FolderAccess.ReadOnly);
+                    int lastCount = inbox.Count;
+
+                    while (true)
+                    {
+                        // Refresh token if expired
+                        if (credential.Token.IsStale)
+                        {
+                            await credential.RefreshTokenAsync(CancellationToken.None);
+                        }
+
+                        await Task.Delay(TimeSpan.FromSeconds(5));
+                        await inbox.OpenAsync(FolderAccess.ReadOnly);
+
+                        if (inbox.Count > lastCount)
+                        {
+                            for (int i = lastCount; i < inbox.Count; i++)
+                            {
+                                var message = await inbox.GetMessageAsync(i);
+                                OnNewMessage(message);
+                            }
+                            lastCount = inbox.Count;
+                        }
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Nem sikerült kapcsolódni a kiszolgálóhoz.", "Kapcsolódási hiba!",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+            }
+        }
 
         public Alarm()
         {
             InitializeComponent();
 
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            path = Path.Combine(path, "tuzoltosag_logs.txt"); ;
+            path = Path.Combine(path, "tuzoltosag_logs.txt");
             // This text is added only once to the file.
             if (!File.Exists(path))
             {
@@ -190,22 +272,9 @@ namespace Tuzoltosag_v1
             lAlarmText.Location = new Point((ClientSize.Width / 2) - (lAlarmText.Width / 5), (ClientSize.Height / 3) - (lAlarmText.Height / 2));
 
             tSPort.Enabled = false;
-            try
-            {
-                //IC = new ImapClient("imap.mail.yahoo.com", "riasztasszomolya@yahoo.com", "qmpshypkeccgveds", AuthMethods.Login, 993, true);
-                IC = new ImapClient(ImapHost, ImapEmail, ImapPassword, AuthMethods.Login, 993, true);
-                //IC = new ImapClient("imap-mail.outlook.com", "riasztasszomolya@hotmail.com", "rsygnofflpqrzuss", AuthMethods.Login, 993, true);
-                //IC = new ImapClient("imap.gmail.com", "riasztasszomolya@gmail.com", "qldtwawscqpsvqbp", AuthMethods.Login, 993, true);
-                IC.SelectMailbox("INBOX");
-                IC.NewMessage += IC_NewMessage;
-            }
-            catch
-            {
-                MessageBox.Show("Nem sikerült kapcsolódni a kiszolgálóhoz.", "Kapcsolódási hiba!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                this.Shown += new EventHandler(CloseOnStartup);
-            }
+            PollEmails();
+
             try
             {
                 using (var searcher = new ManagementObjectSearcher("SELECT * FROM Win32_PnPEntity WHERE Caption like '%(COM%'"))
@@ -260,89 +329,43 @@ namespace Tuzoltosag_v1
             ApplicationUpdate.CheckForUpdates();
         }
 
-        private void CloseOnStartup(object sender, EventArgs e)
-        { 
-            Application.Exit();
-        }
-
-        private void CheckConnection()
+        private void OnNewMessage(MimeMessage message)
         {
-            try
-            {
-                if (IC != null)
-                    IC.GetMessageCount();
-                else
-                {
-
-                    //IC = new ImapClient("imap.mail.yahoo.com", "riasztasszomolya@yahoo.com", "qmpshypkeccgveds", AuthMethods.Login, 993, true);
-                    IC = new ImapClient("outlook.office365.com", "riasztasszomolya@hotmail.com", "rsygnofflpqrzuss", AuthMethods.Login, 993, true);
-                    //IC = new ImapClient("imap-mail.outlook.com", "riasztasszomolya@hotmail.com", "rsygnofflpqrzuss", AuthMethods.Login, 993, true);
-                    //IC = new ImapClient("imap.gmail.com", "riasztasszomolya@gmail.com", "qldtwawscqpsvqbp", AuthMethods.Login, 993, true);
-                    IC.SelectMailbox("INBOX");
-                    IC.NewMessage += IC_NewMessage;
-                }
-            }
-            catch
-            {
-                try
-                {
-                    //IC = new ImapClient("imap.mail.yahoo.com", "riasztasszomolya@yahoo.com", "qmpshypkeccgveds", AuthMethods.Login, 993, true);
-                    IC = new ImapClient("outlook.office365.com", "riasztasszomolya@hotmail.com", "rsygnofflpqrzuss", AuthMethods.Login, 993, true);
-                    //IC = new ImapClient("imap-mail.outlook.com", "riasztasszomolya@hotmail.com", "rsygnofflpqrzuss", AuthMethods.Login, 993, true); 
-                    //IC = new ImapClient("imap.gmail.com", "riasztasszomolya@gmail.com", "qldtwawscqpsvqbp", AuthMethods.Login, 993, true);
-                    IC.SelectMailbox("INBOX");
-                    IC.NewMessage += IC_NewMessage;
-                }
-                catch
-                {
-                    MessageBox.Show("Nem sikerült kapcsolódni a kiszolgálóhoz.", "Kapcsolódási hiba!",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Application.Exit();
-                }
-            }
-        }
-
-        private void IC_NewMessage(object sender, AE.Net.Mail.Imap.MessageEventArgs e)
-        {
-            try
-            {
-                Thread.Sleep(200);
-                var msg = IC.GetMessage(IC.GetMessageCount() - 1);
                 //if (msg.Subject.Equals("Riasztási lap") && msg.From.Address.Equals("emailgw@katved.gov.hu"))
-                if (msg.Subject.Contains("Riasztási lap"))
+                if (message.Subject.Contains("Riasztási lap"))
                 {
 
                     // Get location
 
                     string cityLine = "Település/Szektor: ";
-                    int from = msg.Body.IndexOf(cityLine);
+                    int from = message.TextBody.IndexOf(cityLine);
                     from += cityLine.Length;
                     int len = 0;
 
-                    for (int i = from; i < msg.Body.Length; i++)
+                    for (int i = from; i < message.TextBody.Length; i++)
                     {
-                        if (msg.Body[i] == '\r')
+                        if (message.TextBody[i] == '\r')
                         {
                             break;
                         }
                         len++;
                     }
-                    string city = msg.Body.Substring(from, len);
+                    string city = message.TextBody.Substring(from, len);
 
                     string addressLine = "Cím: ";
-                    from = msg.Body.IndexOf(addressLine);
+                    from = message.TextBody.IndexOf(addressLine);
                     from += addressLine.Length;
                     len = 0;
 
-                    for (int i = from; i < msg.Body.Length; i++)
+                    for (int i = from; i < message.TextBody.Length; i++)
                     {
-                        if (msg.Body[i] == '\r')
+                        if (message.TextBody[i] == '\r')
                         {
                             break;
                         }
                         len++;
                     }
-                    string address = msg.Body.Substring(from, len);
+                    string address = message.TextBody.Substring(from, len);
 
                     // Create QRcode
 
@@ -362,11 +385,11 @@ namespace Tuzoltosag_v1
                     }
                     string data = msg.Body.Substring(from, to - from).Replace("Káreset fajtája: ", "").Trim();
                     */
-                    if (msg.Body.Contains("Tűzeset"))
+                    if (message.TextBody.Contains("Tűzeset"))
                     {
                         Alarm_Fire();
                     }
-                    else if (msg.Body.Contains("Műszaki mentés"))
+                    else if (message.TextBody.Contains("Műszaki mentés"))
                     {
                         Alarm_TechnicalBackup();
                     }
@@ -375,11 +398,6 @@ namespace Tuzoltosag_v1
                         return;
                     }
                 }
-            }
-            catch
-            {
-                // :(
-            }
         }
 
         private void Alarm_Fire()
@@ -859,11 +877,6 @@ namespace Tuzoltosag_v1
         private void bWakeup_Click(object sender, EventArgs e)
         {
             SoundPlayer.Play(new string[] { Properties.Settings.Default.WakeupSound }, false);
-        }
-
-        private void tConnection_Tick(object sender, EventArgs e)
-        {
-            CheckConnection();
         }
 
         private void pAlarm_Click(object sender, EventArgs e)
